@@ -1,12 +1,15 @@
 // import react and react dom
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropSession from './PropSession';
+import PostCard from './PostCard';
 
 // create component
 const App = () => {
   return (
     <div>
-      <h3>Live with ReactJS</h3>
+      <PropSession />
+      <PostCard />
     </div>
   );
 };
