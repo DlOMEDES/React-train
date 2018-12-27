@@ -1,8 +1,8 @@
 // import react and react dom
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PropSession from './PropSession';
-import PostCard from './PostCard';
+import PropSession from './Props/PropSession';
+import PostCard from './Props/PostCard';
 
 // create component
 const App = () => {
