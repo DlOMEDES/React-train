@@ -18,7 +18,7 @@ let style = {
 };
 
 const CommentDetail = props => {
-  console.log(props);
+  // console.log(props);
   return (
     <div className="ui comments">
       <div className="comment">

@@ -1,15 +1,12 @@
 // import react and react dom
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PropSession from './Props/PropSession';
-import PostCard from './Props/PostCard';
-
+import ClassBased from './ClassBased/ClassBased';
 // create component
 const App = () => {
   return (
     <div>
-      <PropSession />
-      <PostCard />
+      <ClassBased />
     </div>
   );
 };
