@@ -1,12 +1,13 @@
 // import react and react dom
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ClassBased from './ClassBased/ClassBased';
+import SeasonsDisplay from './ClassBased/SeasonsDisplay';
+
 // create component
 const App = () => {
   return (
     <div>
-      <ClassBased />
+      <SeasonsDisplay />
     </div>
   );
 };
