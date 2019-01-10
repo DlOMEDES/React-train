@@ -1,6 +1,6 @@
 import React from 'react';
 
-// create class 
+// create class
 class CycleMethods extends React.Component {
   // super constructor props, initialize state
   constructor(props) {
@@ -22,27 +22,20 @@ class CycleMethods extends React.Component {
         this.setState({
           errorMessage: error.message
         });
-      },
-      loading => {
-        this.setState({
-          loading: '...'
-        });
       }
     );
   }
+  // render with return
+  render() {
+    if (this.state.errorMessage && !this.state.lat) {
+      return <div>Error: {this.state.errorMessage}</div>;
+    }
+    if (this.state.lat && !this.state.errorMessage) {
+      return <div>Lat: {this.state.lat}</div>;
+    }
 
-
-// render with return
-render() {
-  
-  if(this.state.errorMessage && !this.state.lat) {
-    return <div>Error: {this.state.errorMessage}</div>
+    return <h3>Loading...</h3>;
   }
-
-  if(this.state.lat && !this.state.errorMessage) {
-    return <div>Lat: {this.state.lat}</div>
-  }
-
-  return <h3>Loading...</h3>
 }
+
 export default CycleMethods;
