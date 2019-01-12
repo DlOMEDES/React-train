@@ -1,4 +1,5 @@
 import React from 'react';
+import SeasonDisplay from '../Component/SeasonDisplay';
 
 // create class
 class CycleMethods extends React.Component {
@@ -11,27 +12,27 @@ class CycleMethods extends React.Component {
       errorMessage: '',
       loading: null
     };
+  }
 
+  componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
-      position => {
-        this.setState({
-          lat: position.coords.latitude
-        });
-      },
-      error => {
-        this.setState({
-          errorMessage: error.message
-        });
-      }
+      position => this.setState({ lat: position.coords.latitude }),
+      error => this.setState({ errorMessage: error.message })
     );
   }
-  // render with return
+  // render and return
   render() {
     if (this.state.errorMessage && !this.state.lat) {
       return <div>Error: {this.state.errorMessage}</div>;
     }
     if (this.state.lat && !this.state.errorMessage) {
-      return <div>Lat: {this.state.lat}</div>;
+      // return <div>Lat: {this.state.lat}</div>;
+      // passing state as props
+      return (
+        <div>
+          <SeasonDisplay lat={this.state.lat} />
+        </div>
+      );
     }
 
     return <h3>Loading...</h3>;
