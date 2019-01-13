@@ -1,6 +1,6 @@
 import React from 'react';
 import SeasonDisplay from '../Component/SeasonDisplay';
-
+import Spinner from '../Component/Spinner'
 // create class
 class CycleMethods extends React.Component {
   // super constructor props, initialize state
@@ -35,7 +35,7 @@ class CycleMethods extends React.Component {
       );
     }
 
-    return <h3>Loading...</h3>;
+    return <Spinner message="Accept location request"/>
   }
 }
 
