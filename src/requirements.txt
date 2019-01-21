@@ -1,0 +1,6 @@
+
+Requirements/User stories
+
+- User can search terms (cars) with a search bar.
+- Use the search term to request API and fetch data
+- Take the fetch data to show on the screen as list

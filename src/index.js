@@ -1,16 +1,7 @@
 // import react and react dom
 import React from 'react';
-import ReactDOM from 'react-dom';
-import CycleMethods from './LifecycleSession/CycleMethods';
-
-// create component
-const App = () => {
-  return (
-    <div>
-      <CycleMethods />
-    </div>
-  );
-};
+import { render } from 'react-dom';
+import App from './component/App';
 
 // render component to the DOM
-ReactDOM.render(<App />, document.querySelector('#root'));
+render(<App />, document.querySelector('#root'));
